@@ -240,8 +240,8 @@ html img {
   height: 100%;
 }
 html .wrapper {
-  width: 80%;
-  max-width: 1000px;
+  width: 85%;
+  max-width: 1050px;
   margin: 0 auto;
 }
 
@@ -276,29 +276,21 @@ header {
   justify-content: center;
   align-items: center;
   background: black;
-  margin-bottom: 10rem;
+  margin-bottom: 8rem;
 }
 header .headerVideo {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  bottom: 0;
+  height: 50%;
 }
-header .headerContainer {
+header h1 {
   position: absolute;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  font-size: 7vmax;
   color: white;
-}
-header .headerContainer h1 {
-  font-size: 8vmax;
 }
 
 h2 {
-  font-size: 8vmax;
-  margin: 0;
+  font-size: 6vmax;
+  margin: 0 0 8rem;
   text-transform: uppercase;
 }
 
@@ -307,61 +299,83 @@ h2 {
   list-style: none;
 }
 .projectList .project {
+  padding: 8% 0;
+  transition: all 0.5s;
+}
+.projectList .wrapper {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 30rem;
+}
+.projectList .description {
+  width: 50%;
   transition: all 0.5s;
 }
-.projectList .project .description {
-  width: 45%;
-  transition: all 0.5s;
-}
-.projectList .project .description h3 {
-  font-size: 6rem;
+.projectList .description h3 {
+  font-size: 5rem;
   margin: 0 0 3rem;
 }
-.projectList .project .description a {
+.projectList .description a {
   color: black;
   text-decoration: none;
-  border: 2px solid black;
-  padding: 1rem;
   margin-right: 3rem;
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
-.projectList .project .description h4 {
+.projectList .description h4 {
+  font-size: 2rem;
+  margin: 3.5rem 0 2rem;
+}
+.projectList .description p {
   font-size: 1.8rem;
+  line-height: 2.7rem;
 }
-.projectList .project .description p {
-  font-size: 1.7rem;
-}
-.projectList .project .projectImage {
-  width: 50%;
+.projectList .projectImage {
+  width: 45%;
   height: 35rem;
   margin: 0 0 0 3rem;
   transition: all 0.5s;
 }
-.projectList li:nth-child(2) .projectImage,
-.projectList li:nth-child(4) .projectImage {
-  margin: 0 3rem 0 0;
+.projectList .project1 {
+  font-family: "Cabin Sketch", cursive;
+  background-image: url(../assets/project1background.jpeg);
+  background-size: 100% 100%;
+  color: blue;
 }
-.projectList li:nth-child(2) .description h3, .projectList li:nth-child(2) .description h4, .projectList li:nth-child(2) .description a, .projectList li:nth-child(2) .description p,
-.projectList li:nth-child(4) .description h3,
-.projectList li:nth-child(4) .description h4,
-.projectList li:nth-child(4) .description a,
-.projectList li:nth-child(4) .description p {
-  text-align: right;
+.projectList .project1 h3 {
+  margin: 0 0 4rem;
 }
-.projectList li:nth-child(2) .description div,
-.projectList li:nth-child(4) .description div {
-  display: flex;
-  justify-content: flex-end;
+.projectList .project1 a {
+  position: relative;
+  border: none;
+  background: white;
+  padding: 1.3rem 2.8rem;
+  border-radius: 2.5rem;
+  box-shadow: 5px 5px blue;
 }
-.projectList li:nth-child(2) .description div a,
-.projectList li:nth-child(4) .description div a {
-  margin: 0 0 0 3rem;
+.projectList .project1 a:hover {
+  box-shadow: 2.5px 2.5px blue;
+  top: 2.5px;
+  left: 2.5px;
 }
+.projectList .project2 a {
+  color: white;
+  background: linear-gradient(to right, #0072ff, #00c6ff);
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+}
+.projectList .project3 {
+  background: #3816d4;
+  color: white;
+}
+.projectList .project3 a {
+  color: white;
+}
+.projectList .project4 {
+  font-family: "Josefin Slab", serif;
+  background: #e3f4f3;
+}
+
 .skills {
-  background: #6889b9;
+  background: black;
   margin-bottom: 10rem;
 }
 .skills ul {
@@ -383,7 +397,7 @@ h2 {
 }
 
 .contact {
-  background: #6889b9;
+  background: black;
   padding: 5rem 0;
 }
 .contact .wrapper {

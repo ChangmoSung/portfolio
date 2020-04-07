@@ -1,6 +1,6 @@
 h2 {
-    font-size: 8vmax;
-    margin: 0;
+    font-size: 6vmax;
+    margin: 0 0 8rem;
     text-transform: uppercase;
 }
 
@@ -9,88 +9,98 @@ h2 {
     list-style: none;
 
     .project {
+        padding: 8% 0;
+        transition: all 0.5s;
+    }
+
+    .wrapper {
         display: flex;
         justify-content: space-between;
-        margin-bottom: 30rem;
+    }
+
+    .description {
+        width: 50%;
         transition: all 0.5s;
 
-        .description {
-            width: 45%;
-            transition: all 0.5s;
-            // transform: translateY(20rem) translateX(-20rem);
-
-            h3 {
-                font-size: 6rem;
-                margin: 0 0 3rem;
-            }
-    
-            a {
-                color: black;
-                text-decoration: none;
-                border: 2px solid black;
-                padding: 1rem;
-                margin-right: 3rem;
-                font-size: 2.5rem;
-            }
-
-            h4 {
-                font-size: 1.8rem;
-            }
-
-            p {
-                font-size: 1.7rem;
-            }
-
-            &.active {
-                // transform: translateY(0) translateX(0);
-            }
+        h3 {
+            font-size: 5rem;
+            margin: 0 0 3rem;
         }
 
-        .projectImage {
-            width: 50%;
-            height: 35rem;
-            margin: 0 0 0 3rem;
-            transition: all 0.5s;
-            // transform: translateY(20rem) translateX(20rem);
+        a {
+            color: black;
+            text-decoration: none;
+            margin-right: 3rem;
+            font-size: 2rem;
+        }
 
-            &.active {
-                // transform: translateY(0) translateX(0);
+        h4 {
+            font-size: 2rem;
+            margin: 3.5rem 0 2rem;
+        }
+
+        p {
+            font-size: 1.8rem;
+            line-height: 2.7rem;
+        }
+    }
+
+    .projectImage {
+        width: 45%;
+        height: 35rem;
+        margin: 0 0 0 3rem;
+        transition: all 0.5s;
+    }
+    
+
+    .project1 {
+        font-family: 'Cabin Sketch', cursive;
+        background-image: url(../assets/project1background.jpeg);
+        background-size: 100% 100%;
+        color: blue;
+
+        h3 {
+            margin: 0 0 4rem;
+        }
+
+        a {
+            position: relative;
+            border: none;
+            background: white;
+            padding: 1.3rem 2.8rem;
+            border-radius: 2.5rem;
+            box-shadow: 5px 5px blue;
+
+            &:hover {
+                box-shadow: 2.5px 2.5px blue;
+                top: 2.5px;
+                left: 2.5px;
             }
         }
     }
-    
-    li:nth-child(2),
-    li:nth-child(4) {
 
-        .projectImage {
-            margin: 0 3rem 0 0;
-            // transform: translateY(20rem) translateX(-20rem);
+    .project2 {
 
-            &.active {
-                // transform: translateY(0) translateX(0);
-            }
+        a {
+            color: white;
+            background: linear-gradient(to right, #0072ff, #00c6ff); 
+            border-radius: 1rem;
+            padding: 1rem 2rem;
         }
+    }
 
-        .description {
-            // transform: translateY(20rem) translateX(20rem);
+    .project3 {
+        background: #3816d4;
+        color: white;
 
-            h3, h4, a, p {
-                text-align: right;
-            }
-
-            div {
-                display: flex;
-                justify-content: flex-end;
-
-                a {
-                    margin: 0 0 0 3rem;
-                }
-            }
-
-            &.active {
-                // transform: translateY(0) translateX(0);
-            }
+        a {
+            color: white;
         }
+    }
+
+    .project4 {
+        font-family: 'Josefin Slab', serif;
+        background: #e3f4f3;
     }
 }
 
