@@ -15,6 +15,19 @@ h2 {
         flex-wrap: wrap;
         justify-content: space-between;
 
+
+        @include mq1100 {
+            justify-content: space-evenly;
+        }
+
+        @include mq768 {
+            justify-content: space-between;
+        }
+
+        @include mq600 {
+            justify-content: center;
+        }
+
         .description {
             margin-bottom: 8rem;
             padding-right: 40%;
@@ -26,14 +39,30 @@ h2 {
                 order: 2;
             }
 
-            .overlayImage {
-                position: absolute;
-                z-index: -1;
+            @include mq768 {
+                width: 58%
+            }
+
+            @include mq600 {
+                order: 1;
+                width: 90%;
+            }
+
+            @include mq430 {
+                margin-bottom: 7.5rem;
             }
 
             h3 {
                 font-size: 4rem;
                 margin: 0 0 2rem; 
+
+                @include mq768 {
+                    font-size: 3rem;
+                }
+
+                @include mq430 {
+                    font-size: 2.9rem;
+                }
             }
 
             a {
@@ -43,17 +72,45 @@ h2 {
                 border: 2px solid black;
                 padding: 0.7rem;
                 margin-right: 2rem;
+
+                @include mq768 {
+                    font-size: 1.7rem;
+                    padding: 0.6rem;
+                }
+
+                @include mq430 {
+                    font-size: 1.6rem;
+                    padding: 0.5rem;
+                }
             }
 
             h4 {
                 font-size: 1.8rem;
                 margin: 2rem 0 0;
+
+                @include mq768 {
+                    font-size: 1.7rem;
+                }
+
+                @include mq430 {
+                    font-size: 1.6rem;
+                }
             }
 
             p {
                 font-size: 1.7rem;
                 line-height: 2.7rem;
                 margin: 1rem 0 0;
+
+                @include mq768 {
+                    font-size: 1.6rem;
+                    line-height: 2.6rem;
+                }
+
+                @include mq430 {
+                    font-size: 1.5rem;
+                    line-height: 2.4rem;
+                }
             }
         }
 
@@ -63,6 +120,29 @@ h2 {
             transition: all 0.5s;
             position: relative;
             box-shadow: 0 0 1rem 0.1rem black;
+
+            @include mq1100 {
+                order: 1;
+                height: 35vmax;
+                width: 22vmax;
+                margin-bottom: 9rem;
+            }
+
+            @include mq768 {
+                margin-bottom: 8rem;
+            }
+
+            @include mq600 {
+                order: 2;
+                width: 19rem;
+                height: 30rem;
+            }
+
+            @include mq430 {
+                width: 17rem;
+                height: 26rem;
+                margin-bottom: 7.5rem;
+            }
 
             .overlayImage {
                 position: absolute;
@@ -80,21 +160,16 @@ h2 {
                     height: 6rem;
                     top: -6rem;
                 }
+
+                @include mq430 {
+                    width: 5rem;
+                    height: 5rem;
+                    top: -5rem;
+                }
             }
 
             .overlayImage:nth-child(1) {
                 left: 0;
-            }
-
-            @include mq1100 {
-                order: 1;
-                height: 34vmax;
-                width: 22vmax;
-                margin-bottom: 9rem;
-            }
-
-            @include mq768 {
-                margin-bottom: 8rem;
             }
         }
         
@@ -108,6 +183,29 @@ h2 {
             &.active {
             }
 
+            @include mq1100 {
+                width: 57vmax;
+                height: 38vmax;
+                margin: 0 auto;
+                order: 3;
+            }
+
+            @include mq600 {
+                order: 2;
+                width: 38rem;
+                height: 25rem;
+            }
+
+            @include mq430 {
+                width: 30rem;
+                height: 20rem;
+            }
+
+            @include mq375 {
+                width: 28rem;
+                height: 18.5rem;
+            }
+
             .overlayImage {
                 position: absolute;
                 width: 7rem;
@@ -124,22 +222,17 @@ h2 {
                     height: 6rem;
                     top: -6rem;
                 }
+                
+                @include mq430 {
+                    width: 5rem;
+                    height: 5rem;
+                    top: -5rem;
+                }
             }
 
             .overlayImage:nth-child(1) {
                 left: 0;
             }
-
-            @include mq1100 {
-                width: 57vmax;
-                height: 35vmax;
-                margin: 0 auto;
-                order: 3;
-            }
-        }
-
-        @include mq1100 {
-            justify-content: space-evenly;
         }
     }
 }

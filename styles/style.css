@@ -306,6 +306,21 @@ h2 {
   flex-wrap: wrap;
   justify-content: space-between;
 }
+@media (max-width: 1100px) {
+  .projectList .project {
+    justify-content: space-evenly;
+  }
+}
+@media (max-width: 768px) {
+  .projectList .project {
+    justify-content: space-between;
+  }
+}
+@media (max-width: 600px) {
+  .projectList .project {
+    justify-content: center;
+  }
+}
 .projectList .project .description {
   margin-bottom: 8rem;
   padding-right: 40%;
@@ -318,13 +333,35 @@ h2 {
     order: 2;
   }
 }
-.projectList .project .description .overlayImage {
-  position: absolute;
-  z-index: -1;
+@media (max-width: 768px) {
+  .projectList .project .description {
+    width: 58%;
+  }
+}
+@media (max-width: 600px) {
+  .projectList .project .description {
+    order: 1;
+    width: 90%;
+  }
+}
+@media (max-width: 430px) {
+  .projectList .project .description {
+    margin-bottom: 7.5rem;
+  }
 }
 .projectList .project .description h3 {
   font-size: 4rem;
   margin: 0 0 2rem;
+}
+@media (max-width: 768px) {
+  .projectList .project .description h3 {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 430px) {
+  .projectList .project .description h3 {
+    font-size: 2.9rem;
+  }
 }
 .projectList .project .description a {
   color: black;
@@ -334,14 +371,48 @@ h2 {
   padding: 0.7rem;
   margin-right: 2rem;
 }
+@media (max-width: 768px) {
+  .projectList .project .description a {
+    font-size: 1.7rem;
+    padding: 0.6rem;
+  }
+}
+@media (max-width: 430px) {
+  .projectList .project .description a {
+    font-size: 1.6rem;
+    padding: 0.5rem;
+  }
+}
 .projectList .project .description h4 {
   font-size: 1.8rem;
   margin: 2rem 0 0;
+}
+@media (max-width: 768px) {
+  .projectList .project .description h4 {
+    font-size: 1.7rem;
+  }
+}
+@media (max-width: 430px) {
+  .projectList .project .description h4 {
+    font-size: 1.6rem;
+  }
 }
 .projectList .project .description p {
   font-size: 1.7rem;
   line-height: 2.7rem;
   margin: 1rem 0 0;
+}
+@media (max-width: 768px) {
+  .projectList .project .description p {
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+  }
+}
+@media (max-width: 430px) {
+  .projectList .project .description p {
+    font-size: 1.5rem;
+    line-height: 2.4rem;
+  }
 }
 .projectList .project .projectMobileImage {
   width: 30%;
@@ -349,6 +420,33 @@ h2 {
   transition: all 0.5s;
   position: relative;
   box-shadow: 0 0 1rem 0.1rem black;
+}
+@media (max-width: 1100px) {
+  .projectList .project .projectMobileImage {
+    order: 1;
+    height: 35vmax;
+    width: 22vmax;
+    margin-bottom: 9rem;
+  }
+}
+@media (max-width: 768px) {
+  .projectList .project .projectMobileImage {
+    margin-bottom: 8rem;
+  }
+}
+@media (max-width: 600px) {
+  .projectList .project .projectMobileImage {
+    order: 2;
+    width: 19rem;
+    height: 30rem;
+  }
+}
+@media (max-width: 430px) {
+  .projectList .project .projectMobileImage {
+    width: 17rem;
+    height: 26rem;
+    margin-bottom: 7.5rem;
+  }
 }
 .projectList .project .projectMobileImage .overlayImage {
   position: absolute;
@@ -367,21 +465,15 @@ h2 {
     top: -6rem;
   }
 }
+@media (max-width: 430px) {
+  .projectList .project .projectMobileImage .overlayImage {
+    width: 5rem;
+    height: 5rem;
+    top: -5rem;
+  }
+}
 .projectList .project .projectMobileImage .overlayImage:nth-child(1) {
   left: 0;
-}
-@media (max-width: 1100px) {
-  .projectList .project .projectMobileImage {
-    order: 1;
-    height: 34vmax;
-    width: 22vmax;
-    margin-bottom: 9rem;
-  }
-}
-@media (max-width: 768px) {
-  .projectList .project .projectMobileImage {
-    margin-bottom: 8rem;
-  }
 }
 .projectList .project .projectDesktopImage {
   width: 65%;
@@ -389,6 +481,33 @@ h2 {
   transition: all 0.5s;
   position: relative;
   box-shadow: 0 0 1rem 0.1rem black;
+}
+@media (max-width: 1100px) {
+  .projectList .project .projectDesktopImage {
+    width: 57vmax;
+    height: 38vmax;
+    margin: 0 auto;
+    order: 3;
+  }
+}
+@media (max-width: 600px) {
+  .projectList .project .projectDesktopImage {
+    order: 2;
+    width: 38rem;
+    height: 25rem;
+  }
+}
+@media (max-width: 430px) {
+  .projectList .project .projectDesktopImage {
+    width: 30rem;
+    height: 20rem;
+  }
+}
+@media (max-width: 375px) {
+  .projectList .project .projectDesktopImage {
+    width: 28rem;
+    height: 18.5rem;
+  }
 }
 .projectList .project .projectDesktopImage .overlayImage {
   position: absolute;
@@ -407,21 +526,15 @@ h2 {
     top: -6rem;
   }
 }
+@media (max-width: 430px) {
+  .projectList .project .projectDesktopImage .overlayImage {
+    width: 5rem;
+    height: 5rem;
+    top: -5rem;
+  }
+}
 .projectList .project .projectDesktopImage .overlayImage:nth-child(1) {
   left: 0;
-}
-@media (max-width: 1100px) {
-  .projectList .project .projectDesktopImage {
-    width: 57vmax;
-    height: 35vmax;
-    margin: 0 auto;
-    order: 3;
-  }
-}
-@media (max-width: 1100px) {
-  .projectList .project {
-    justify-content: space-evenly;
-  }
 }
 
 @keyframes spin {

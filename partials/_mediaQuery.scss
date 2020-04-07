@@ -9,3 +9,21 @@
         @content;
     }
 }
+
+@mixin mq600 {
+    @media(max-width: 600px) {
+        @content;
+    }
+}
+
+@mixin mq430 {
+    @media(max-width: 430px) {
+        @content;
+    }
+}
+
+@mixin mq375 {
+    @media(max-width: 375px) {
+        @content;
+    }
+}
