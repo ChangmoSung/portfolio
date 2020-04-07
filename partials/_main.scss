@@ -11,11 +11,10 @@ h2 {
     .project {
         padding: 8% 0;
         transition: all 0.5s;
-        display: flex;
-        justify-content: space-between;
 
         .description {
-            width: 45%;
+            width: 60%;
+            margin-bottom: 8rem;
             transition: all 0.5s;
 
             .overlayImage {
@@ -24,54 +23,86 @@ h2 {
             }
 
             h3 {
-                font-size: 5rem;
-                margin-top: 0; 
+                font-size: 4rem;
+                margin: 0 0 2rem; 
             }
 
             a {
                 color: black;
                 text-decoration: none;
-                font-size: 2rem;
+                font-size: 1.8rem;
                 border: 2px solid black;
-                padding: 1rem;
+                padding: 0.7rem;
                 margin-right: 2rem;
             }
 
             h4 {
-                font-size: 2rem;
+                font-size: 1.8rem;
+                margin: 2rem 0 0;
             }
 
             p {
-                font-size: 1.8rem;
+                font-size: 1.7rem;
                 line-height: 2.7rem;
+                margin: 1rem 0 0;
             }
             
         }
 
-        .projectImage {
-            width: 50%;
-            height: 50rem;
-            margin-left: 3rem;
-            transition: all 0.5s;
-            position: relative;
-
-            &.active {
-            }
-
-            .overlayImage {
-                position: absolute;
-                width: 10rem;
-                height: 10rem;
-                top: -10rem;
-                right: -5rem;
-                
+        .imageContainer {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            
+            .projectDesktopImage {
+                width: 65%;
+                height: 45rem;
+                transition: all 0.5s;
+                position: relative;
+                box-shadow: 0 0 1rem 0.1rem black;
+    
                 &.active {
-                    animation: spin 1s linear infinite;
+                }
+    
+                .overlayImage {
+                    position: absolute;
+                    width: 7rem;
+                    height: 7rem;
+                    top: -7rem;
+                    right: 0rem;
+                    
+                    &.active {
+                        animation: spin 1.5s linear infinite;
+                    }
+                }
+    
+                .overlayImage:nth-child(1) {
+                    left: 0;
                 }
             }
-
-            .overlayImage:nth-child(1) {
-                left: -5rem;
+    
+            .projectMobileImage {
+                width: 30%;
+                height: 45rem;
+                transition: all 0.5s;
+                position: relative;
+                box-shadow: 0 0 1rem 0.1rem black;
+    
+                .overlayImage {
+                    position: absolute;
+                    width: 7rem;
+                    height: 7rem;
+                    top: -7rem;
+                    right: 0rem;
+                    
+                    &.active {
+                        animation: spin 1.5s linear infinite;
+                    }
+                }
+    
+                .overlayImage:nth-child(1) {
+                    left: 0;
+                }
             }
         }
     }

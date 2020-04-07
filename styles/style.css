@@ -241,8 +241,8 @@ html video {
   height: 100%;
 }
 html .wrapper {
-  width: 85%;
-  max-width: 1000px;
+  width: 80%;
+  max-width: 100rem;
   margin: 0 auto;
 }
 
@@ -302,11 +302,10 @@ h2 {
 .projectList .project {
   padding: 8% 0;
   transition: all 0.5s;
-  display: flex;
-  justify-content: space-between;
 }
 .projectList .project .description {
-  width: 45%;
+  width: 60%;
+  margin-bottom: 8rem;
   transition: all 0.5s;
 }
 .projectList .project .description .overlayImage {
@@ -314,43 +313,70 @@ h2 {
   z-index: -1;
 }
 .projectList .project .description h3 {
-  font-size: 5rem;
-  margin-top: 0;
+  font-size: 4rem;
+  margin: 0 0 2rem;
 }
 .projectList .project .description a {
   color: black;
   text-decoration: none;
-  font-size: 2rem;
+  font-size: 1.8rem;
   border: 2px solid black;
-  padding: 1rem;
+  padding: 0.7rem;
   margin-right: 2rem;
 }
 .projectList .project .description h4 {
-  font-size: 2rem;
+  font-size: 1.8rem;
+  margin: 2rem 0 0;
 }
 .projectList .project .description p {
-  font-size: 1.8rem;
+  font-size: 1.7rem;
   line-height: 2.7rem;
+  margin: 1rem 0 0;
 }
-.projectList .project .projectImage {
-  width: 50%;
-  height: 50rem;
-  margin-left: 3rem;
+.projectList .project .imageContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.projectList .project .imageContainer .projectDesktopImage {
+  width: 65%;
+  height: 45rem;
   transition: all 0.5s;
   position: relative;
+  box-shadow: 0 0 1rem 0.1rem black;
 }
-.projectList .project .projectImage .overlayImage {
+.projectList .project .imageContainer .projectDesktopImage .overlayImage {
   position: absolute;
-  width: 10rem;
-  height: 10rem;
-  top: -10rem;
-  right: -5rem;
+  width: 7rem;
+  height: 7rem;
+  top: -7rem;
+  right: 0rem;
 }
-.projectList .project .projectImage .overlayImage.active {
-  animation: spin 1s linear infinite;
+.projectList .project .imageContainer .projectDesktopImage .overlayImage.active {
+  animation: spin 1.5s linear infinite;
 }
-.projectList .project .projectImage .overlayImage:nth-child(1) {
-  left: -5rem;
+.projectList .project .imageContainer .projectDesktopImage .overlayImage:nth-child(1) {
+  left: 0;
+}
+.projectList .project .imageContainer .projectMobileImage {
+  width: 30%;
+  height: 45rem;
+  transition: all 0.5s;
+  position: relative;
+  box-shadow: 0 0 1rem 0.1rem black;
+}
+.projectList .project .imageContainer .projectMobileImage .overlayImage {
+  position: absolute;
+  width: 7rem;
+  height: 7rem;
+  top: -7rem;
+  right: 0rem;
+}
+.projectList .project .imageContainer .projectMobileImage .overlayImage.active {
+  animation: spin 1.5s linear infinite;
+}
+.projectList .project .imageContainer .projectMobileImage .overlayImage:nth-child(1) {
+  left: 0;
 }
 
 @keyframes spin {
@@ -365,11 +391,10 @@ h2 {
   background: black;
   margin-bottom: 10rem;
   position: relative;
+  overflow: hidden;
 }
 .skills .videoInSkills {
   position: absolute;
-  bottom: 0;
-  height: 100%;
 }
 .skills ul {
   position: relative;

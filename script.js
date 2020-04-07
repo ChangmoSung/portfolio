@@ -1,21 +1,9 @@
 $(function() {
     const $projectDescriptions = $('.description').toArray()
-    const $projectImages = $('.projectImage').toArray();
-    const $overlayImages = $('.overlayImage').toArray();
-    let previousScroll;
+    const $projectDesktopImages = $('.projectDesktopImage').toArray();
 
     function slideProject() {
         const scrollTop = $(this).scrollTop();
-
-        // $overlayImages.forEach(image => {
-        //     if (scrollTop > previousScroll) {
-        //         image.classList.add('active');
-        //     } else {
-        //         image.classList.remove('active');
-        //     }
-        // })
-
-        // previousScroll = scrollTop;
 
         $projectDescriptions.forEach(description => {
             const slideAt = (scrollTop + window.innerHeight) - description.offsetHeight / 2;
@@ -30,7 +18,7 @@ $(function() {
             }
         })
 
-        $projectImages.forEach(image => {
+        $projectDesktopImages.forEach(image => {
             const slideAt = (scrollTop + window.innerHeight) - image.offsetHeight / 2;
             const elementBottom = image.offsetTop + image.offsetHeight;
             const halfShown = slideAt > image.offsetTop;
