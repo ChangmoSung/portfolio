@@ -1,17 +1,25 @@
 header {
-    background-image: url(../assets/ChangmoSung.png);
-    background-size: contain;
-    background-repeat: no-repeat;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    background: black;
     margin-bottom: 10rem;
 
+    .headerVideo {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
     .headerContainer {
+        position: absolute;
         display: flex;
         flex-direction: column;
         align-items: center;
+        color: white;
 
         h1 {
             font-size: 8vmax;

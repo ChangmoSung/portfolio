@@ -232,6 +232,8 @@ html {
 
 html {
   font-size: 62.5%;
+  font-family: "Roboto", sans-serif;
+  scroll-behavior: smooth;
 }
 html img {
   width: 100%;
@@ -243,28 +245,61 @@ html .wrapper {
   margin: 0 auto;
 }
 
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 90%;
+}
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  padding: 2rem 0;
+}
+nav ul li {
+  margin-left: 5rem;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+nav.changeNav a {
+  color: black;
+}
+
 header {
-  background-image: url(../assets/ChangmoSung.png);
-  background-size: contain;
-  background-repeat: no-repeat;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  background: black;
   margin-bottom: 10rem;
 }
+header .headerVideo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
 header .headerContainer {
+  position: absolute;
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: white;
 }
 header .headerContainer h1 {
   font-size: 8vmax;
 }
 
 h2 {
-  font-size: 10vmax;
+  font-size: 8vmax;
   margin: 0;
+  text-transform: uppercase;
 }
 
 .projectList {
@@ -315,6 +350,15 @@ h2 {
 .projectList li:nth-child(4) .description a,
 .projectList li:nth-child(4) .description p {
   text-align: right;
+}
+.projectList li:nth-child(2) .description div,
+.projectList li:nth-child(4) .description div {
+  display: flex;
+  justify-content: flex-end;
+}
+.projectList li:nth-child(2) .description div a,
+.projectList li:nth-child(4) .description div a {
+  margin: 0 0 0 3rem;
 }
 .skills {
   background: #6889b9;
