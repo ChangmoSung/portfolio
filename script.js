@@ -1,7 +1,7 @@
 $(function() {
     const $projectDescriptions = $('.description').toArray()
     const $projectDesktopImages = $('.projectDesktopImage').toArray();
-
+    const $projectMobileImages = $('.projectMobileImage').toArray();
     function slideProject() {
         const scrollTop = $(this).scrollTop();
 
@@ -19,6 +19,14 @@ $(function() {
         })
 
         $projectDesktopImages.forEach(image => {
+            spinFlower(image);
+        })
+
+        $projectMobileImages.forEach(image => {
+            spinFlower(image);
+        })
+
+        function spinFlower(image) {
             const slideAt = (scrollTop + window.innerHeight) - image.offsetHeight / 2;
             const elementBottom = image.offsetTop + image.offsetHeight;
             const halfShown = slideAt > image.offsetTop;
@@ -33,7 +41,7 @@ $(function() {
                 image.children[0].classList.remove('active');
                 image.children[1].classList.remove('active');
             }
-        })
+        }
     }
 
     $(window).on('scroll', slideProject);
