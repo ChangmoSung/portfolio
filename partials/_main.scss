@@ -11,96 +11,78 @@ h2 {
     .project {
         padding: 8% 0;
         transition: all 0.5s;
-    }
-
-    .wrapper {
         display: flex;
         justify-content: space-between;
-    }
 
-    .description {
-        width: 50%;
-        transition: all 0.5s;
+        .description {
+            width: 45%;
+            transition: all 0.5s;
 
-        h3 {
-            font-size: 5rem;
-            margin: 0 0 3rem;
+            .overlayImage {
+                position: absolute;
+                z-index: -1;
+            }
+
+            h3 {
+                font-size: 5rem;
+                margin-top: 0; 
+            }
+
+            a {
+                color: black;
+                text-decoration: none;
+                font-size: 2rem;
+                border: 2px solid black;
+                padding: 1rem;
+                margin-right: 2rem;
+            }
+
+            h4 {
+                font-size: 2rem;
+            }
+
+            p {
+                font-size: 1.8rem;
+                line-height: 2.7rem;
+            }
+            
         }
 
-        a {
-            color: black;
-            text-decoration: none;
-            margin-right: 3rem;
-            font-size: 2rem;
-        }
-
-        h4 {
-            font-size: 2rem;
-            margin: 3.5rem 0 2rem;
-        }
-
-        p {
-            font-size: 1.8rem;
-            line-height: 2.7rem;
-        }
-    }
-
-    .projectImage {
-        width: 45%;
-        height: 35rem;
-        margin: 0 0 0 3rem;
-        transition: all 0.5s;
-    }
-    
-
-    .project1 {
-        font-family: 'Cabin Sketch', cursive;
-        background-image: url(../assets/project1background.jpeg);
-        background-size: 100% 100%;
-        color: blue;
-
-        h3 {
-            margin: 0 0 4rem;
-        }
-
-        a {
+        .projectImage {
+            width: 50%;
+            height: 50rem;
+            margin-left: 3rem;
+            transition: all 0.5s;
             position: relative;
-            border: none;
-            background: white;
-            padding: 1.3rem 2.8rem;
-            border-radius: 2.5rem;
-            box-shadow: 5px 5px blue;
 
-            &:hover {
-                box-shadow: 2.5px 2.5px blue;
-                top: 2.5px;
-                left: 2.5px;
+            &.active {
+            }
+
+            .overlayImage {
+                position: absolute;
+                width: 10rem;
+                height: 10rem;
+                top: -10rem;
+                right: -5rem;
+                
+                &.active {
+                    animation: spin 1s linear infinite;
+                }
+            }
+
+            .overlayImage:nth-child(1) {
+                left: -5rem;
             }
         }
     }
-
-    .project2 {
-
-        a {
-            color: white;
-            background: linear-gradient(to right, #0072ff, #00c6ff); 
-            border-radius: 1rem;
-            padding: 1rem 2rem;
-        }
-    }
-
-    .project3 {
-        background: #3816d4;
-        color: white;
-
-        a {
-            color: white;
-        }
-    }
-
-    .project4 {
-        font-family: 'Josefin Slab', serif;
-        background: #e3f4f3;
-    }
 }
 
+@keyframes spin {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

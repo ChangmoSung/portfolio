@@ -1,12 +1,21 @@
 .skills {
     background: black;
     margin-bottom: 10rem;
+    position: relative;
+
+
+    .videoInSkills {
+        position: absolute;
+        bottom: 0;
+        height: 100%;
+    }
 
     ul {
+        position: relative;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
         grid-gap: 6rem;
-        padding: 6% 0;
+        padding: 7% 0;
 
         li {
             display: flex;
