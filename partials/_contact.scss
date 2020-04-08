@@ -1,11 +1,14 @@
 .contact {
     background: black;
-    padding: 5rem 0;
+    padding: 7rem 0;
+
+    @include mq600 {
+        padding: 6rem 0;
+    }
 
     .wrapper {
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
     
         ul {
@@ -17,18 +20,74 @@
             margin: 0;
             padding: 0;
             color: white;
-            margin-bottom: 4rem;
+            margin-bottom: 7rem;
+
+            @include mq768 {
+                font-size: 4.5rem;
+            }
+
+            @include mq600 {
+                font-size: 4rem;
+                margin-bottom: 6rem;
+            }
+
+            @include mq430 {
+                font-size: 3.6rem;
+            }
+
+            @include mq375 {
+                font-size: 3.4rem;
+            }
         }
 
         a {
             font-size: 3.5rem;
             color: white;
             text-decoration: none;
-            text-align: center;
+
+            @include mq768 {
+                font-size: 3.1rem;
+            }
+
+            @include mq600 {
+                font-size: 2.7rem;
+            }
+
+            @include mq430 {
+                font-size: 2.3rem;
+            }
+
+            @include mq375 {
+                font-size: 2.15rem;
+            }
         }
 
         a:nth-of-type(1) {
-            margin-bottom: 4rem;
+            margin-bottom: 7rem;
+
+            @include mq600 {
+                margin-bottom: 6rem;
+            }
+        }
+
+        a:nth-of-type(2) {
+            font-size: 2.75rem;
+
+            @include mq768 {
+                font-size: 2.35rem;
+            }
+
+            @include mq600 {
+                font-size: 2.2rem;
+            }
+
+            @include mq430 {
+                font-size: 2.05rem;
+            }
+
+            @include mq375 {
+                font-size: 2rem;
+            }
         }
     }
 }

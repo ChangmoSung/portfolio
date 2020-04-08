@@ -1,10 +1,26 @@
 footer {
     background: black;
-    padding: 1.5rem 0;
+    padding: 2rem 0;
+
+    @include mq600 {
+        padding: 1.75rem 0;
+    }
+
+    @include mq430 {
+        padding: 1.6rem 0;
+    }
 
     p {
         color: white;
         text-align: center;
         font-size: 2rem;
+
+        @include mq600 {
+            font-size: 1.75rem;
+        }
+
+        @include mq430 {
+            font-size: 1.6rem;
+        }
     }
 }
