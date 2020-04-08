@@ -1,7 +1,29 @@
-h2 {
-    font-size: 6vmax;
-    margin: 0 0 8rem;
+#projects,
+#skillList,
+#contact {
+    font-size: 6.5vmax;
+    margin: 0 0 0rem;
     text-transform: uppercase;
+}
+
+#projects {
+    margin-bottom: 5rem;
+
+    @include mq1100 {
+        margin-bottom: 12rem;
+    }
+
+    @include mq768 {
+        margin-bottom: 10rem;
+    }
+
+    @include mq600 {
+        margin-bottom: 5rem;
+    }
+}
+
+#contact {
+    margin-top: 18rem;
 }
 
 .projectList {
@@ -9,7 +31,7 @@ h2 {
     list-style: none;
 
     .project {
-        margin: 0 0 20rem;
+        margin: 0 0 18rem;
         transition: all 0.5s;
         display: flex;
         flex-wrap: wrap;
@@ -26,6 +48,7 @@ h2 {
 
         @include mq600 {
             justify-content: center;
+            margin: 0 0 15rem;
         }
 
         .description {
@@ -53,15 +76,15 @@ h2 {
             }
 
             h3 {
-                font-size: 4rem;
+                font-size: 4.5rem;
                 margin: 0 0 2rem; 
 
                 @include mq768 {
-                    font-size: 3rem;
+                    font-size: 4rem;
                 }
 
                 @include mq430 {
-                    font-size: 2.9rem;
+                    font-size: 3.8rem;
                 }
             }
 
@@ -152,7 +175,7 @@ h2 {
                 right: 0rem;
                 
                 &.active {
-                    animation: spin 1.5s linear infinite;
+                    animation: spin 3s linear infinite;
                 }
 
                 @include mq768 {
@@ -214,7 +237,7 @@ h2 {
                 right: 0rem;
                 
                 &.active {
-                    animation: spin 1.5s linear infinite;
+                    animation: spin 3s linear infinite;
                 }
                 
                 @include mq768 {

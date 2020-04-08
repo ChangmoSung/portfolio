@@ -276,7 +276,7 @@ header {
   justify-content: center;
   align-items: flex-end;
   background: black;
-  margin-bottom: 12rem;
+  margin-bottom: 10rem;
 }
 header .headerVideo {
   bottom: 0;
@@ -289,10 +289,35 @@ header h1 {
   margin-bottom: 15vh;
 }
 
-h2 {
-  font-size: 6vmax;
-  margin: 0 0 8rem;
+#projects,
+#skillList,
+#contact {
+  font-size: 6.5vmax;
+  margin: 0 0 0rem;
   text-transform: uppercase;
+}
+
+#projects {
+  margin-bottom: 5rem;
+}
+@media (max-width: 1100px) {
+  #projects {
+    margin-bottom: 12rem;
+  }
+}
+@media (max-width: 768px) {
+  #projects {
+    margin-bottom: 10rem;
+  }
+}
+@media (max-width: 600px) {
+  #projects {
+    margin-bottom: 5rem;
+  }
+}
+
+#contact {
+  margin-top: 18rem;
 }
 
 .projectList {
@@ -300,7 +325,7 @@ h2 {
   list-style: none;
 }
 .projectList .project {
-  margin: 0 0 20rem;
+  margin: 0 0 18rem;
   transition: all 0.5s;
   display: flex;
   flex-wrap: wrap;
@@ -319,6 +344,7 @@ h2 {
 @media (max-width: 600px) {
   .projectList .project {
     justify-content: center;
+    margin: 0 0 15rem;
   }
 }
 .projectList .project .description {
@@ -350,17 +376,17 @@ h2 {
   }
 }
 .projectList .project .description h3 {
-  font-size: 4rem;
+  font-size: 4.5rem;
   margin: 0 0 2rem;
 }
 @media (max-width: 768px) {
   .projectList .project .description h3 {
-    font-size: 3rem;
+    font-size: 4rem;
   }
 }
 @media (max-width: 430px) {
   .projectList .project .description h3 {
-    font-size: 2.9rem;
+    font-size: 3.8rem;
   }
 }
 .projectList .project .description a {
@@ -456,7 +482,7 @@ h2 {
   right: 0rem;
 }
 .projectList .project .projectMobileImage .overlayImage.active {
-  animation: spin 1.5s linear infinite;
+  animation: spin 3s linear infinite;
 }
 @media (max-width: 768px) {
   .projectList .project .projectMobileImage .overlayImage {
@@ -517,7 +543,7 @@ h2 {
   right: 0rem;
 }
 .projectList .project .projectDesktopImage .overlayImage.active {
-  animation: spin 1.5s linear infinite;
+  animation: spin 3s linear infinite;
 }
 @media (max-width: 768px) {
   .projectList .project .projectDesktopImage .overlayImage {
