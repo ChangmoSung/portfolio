@@ -7,14 +7,40 @@ header {
     margin-bottom: 10rem;
 
     .headerVideo {
-        bottom: 0;
         height: 80%;
     }
 
     h1 {
         position: absolute;
-        font-size: 7vmax;
+        font-size: 12rem;
         color: white;
-        margin-bottom: 15vh;
+        margin-bottom: 8vh;
+        text-align: center;
+
+        @include mq1100 {
+            font-size: 9.5rem;
+        }
+
+        @include mq768 {
+            width: 75%;
+            text-align: left;
+            line-height: 8.5rem;
+            font-size: 8.5rem;
+        }
+
+        @include mq600 {
+            font-size: 7.5rem;
+            line-height: 7.5rem;
+        }
+
+        @include mq430 {
+            font-size: 6.5rem;
+            line-height: 6.5rem;
+        }
+
+        @include mq375 {
+            font-size: 5.5rem;
+            line-height: 6rem;
+        }
     }
 }

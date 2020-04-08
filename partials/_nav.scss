@@ -1,26 +1,103 @@
+#navTrigger {
+    display: none;
+
+    &:checked ~ nav {
+        right: 0;
+    }
+}
+
+.navTrigger {
+    display: none;
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    width: 7.5rem;
+    height: 7.5rem;
+    z-index: 999;
+    color: white;
+    cursor: pointer;
+
+    @include mq768 {
+        display: block;
+    }
+}
+
 nav {
    position: fixed;
    top: 0;
+   right: 0;
    width: 100%;
    background: black;
-   z-index: 999;
+   z-index: 2;
+   transition: 0.4s all;
+
+   &.changeColour {
+       background: black;
+   }
+
+   @include mq768 {
+        width: 26rem;
+        top: 8.5rem;
+        right: -26rem;
+        background: white;
+   }
     
     ul {
         display: flex;
         justify-content: flex-end;
         list-style: none;
-        padding: 1.2rem 0;
         margin-right: 10%;
+
+        @include mq768 {
+            flex-direction: column;
+            margin: 0;
+            padding: 0;
+        }
         
         li {
-            margin-left: 5rem;
-        }
-    }
+            padding: 1.2rem 0;
+            margin-left: 7rem;
+            cursor: pointer;
 
-    a {
-        color: white;
-        text-decoration: none;
-        font-size: 2.5rem;
-        text-transform: uppercase;
+            @include mq1100 {
+                margin-left: 5.5rem;
+            }
+
+            @include mq768 {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 6rem;
+                margin: 0;
+
+                &:hover {
+                    background: rgba(0, 0, 0, 0.7);
+                }
+
+                &:hover a {
+                    color: white;
+                }
+            }
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+            font-size: 3rem;
+            text-transform: uppercase;
+
+            &.changeColour {
+                color: white;
+            }
+
+            @include mq1100 {
+                font-size: 2.5rem;
+            }
+
+            @include mq768 {
+                color: black;
+                font-size: 2rem;
+            }
+        }
     }
 }

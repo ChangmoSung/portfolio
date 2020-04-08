@@ -12,26 +12,39 @@
 </head>
 <body>
     <header id='home'>
-        <video class='headerVideo' autoplay muted>
-            <source src="assets/flower.mp4">
+        <video class='headerVideo' tabindex="-1" autoplay muted>
+            <source src="assets/headerFlower.mp4">
         </video>
+
+        <input type="checkbox" id='navTrigger'>
+        <label for="navTrigger" class='navTrigger'>
+            <img src="assets/overlayImage.png" alt="flower">
+        </label>
 
         <nav>
             <ul>
                 <li>
-                    <a href="#about">about</a>
+                    <a href="#projects">
+                        <span tabindex="0">projects</span>
+                    </a>
                 </li>
 
                 <li>
-                    <a href="#contact">contact</a>
+                    <a href="#skillList">
+                        <span tabindex="0">skills</span>
+                    </a>
                 </li>
 
                 <li>
-                    <a href="#projects">projects</a>
+                    <a href="#about">
+                        <span tabindex="0">about</span>
+                    </a>
                 </li>
-                
+
                 <li>
-                    <a href="#skillList">skills</a>
+                    <a href="#contact">
+                        <span tabindex="0">contact</span>
+                    </a>
                 </li>
             </ul>
         </nav>
@@ -232,7 +245,7 @@
 
         <section class='skills'>
             <div class='skillsContainer'>
-                <video autoplay muted loop>
+                <video tabindex="-1" autoplay muted loop>
                     <source src="assets/flowerFalling.mov">
                 </video>
 
@@ -301,9 +314,13 @@
                     </li>
                 </ul>
     
-                <a href="mailto:changmosung0914@gmail.com">changmosung0914@gmail.com</a>
+                <a href="mailto:changmosung0914@gmail.com">
+                    <span tabindex="0">changmosung0914@gmail.com</span>
+                </a>
     
-                <a href="#home">Back to Top</a>
+                <a href="#home">
+                    <span tabindex="0">Back to Top</span>
+                </a>
             </div>
         </section>
     </main>
