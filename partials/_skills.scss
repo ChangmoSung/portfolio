@@ -1,30 +1,79 @@
 .skills {
-    background: black;
     margin-bottom: 10rem;
-    position: relative;
-    overflow: hidden;
 
-    .videoInSkills {
-        position: absolute;
-    }
-
-    ul {
+    .skillsContainer {
         position: relative;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-        grid-gap: 6rem;
-        padding: 7% 0;
 
-        li {
+        video {
+            min-height: 55.5rem;
+            object-fit: cover;
+        }
+
+        ul {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            margin: 0 auto;
+            padding: 4% 10%;
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            font-size: 6rem;
-            color: white;
+            flex-wrap: wrap;
+            justify-content: center;
 
-            span {
-                margin-top: 1rem;
-                font-size: 2.2rem;
+            @include mq1100 {
+                padding: 4% 3%;
+            }
+
+            @include mq600 {
+                padding: 4% 0;
+            }
+
+            @include mq430 {
+                padding: 4% 10%;
+            }
+
+            li {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                font-size: 6rem;
+                color: white;
+                width: calc(100% / 5);
+
+                @include mq1100 {
+                    width: calc(100% / 4);
+                    font-size: 5rem;
+                }
+
+                @include mq600 {
+                    width: calc(100% / 3);
+                    font-size: 4.5rem;
+                }
+
+                @include mq430 {
+                    font-size: 4rem;
+                    width: 50%;
+                }
+
+
+                span {
+                    margin-top: 1rem;
+                    font-size: 1.9rem;
+
+                    @include mq1100 {
+                        font-size: 1.7rem;
+                    }
+
+                    @include mq600 {
+                        font-size: 1.55rem;
+                    }
+
+                    @include mq430 {
+                        font-size: 1.45rem;
+                    }
+                }
             }
         }
     }
