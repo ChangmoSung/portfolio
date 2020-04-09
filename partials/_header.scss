@@ -5,6 +5,7 @@ header {
     align-items: flex-end;
     background: black;
     margin-bottom: 10rem;
+    padding-bottom: 4vh;
 
     .headerVideo {
         height: 80%;
@@ -14,7 +15,6 @@ header {
         position: absolute;
         font-size: 10rem;
         color: white;
-        margin-bottom: 8vh;
         text-align: center;
 
         @include mq1100 {

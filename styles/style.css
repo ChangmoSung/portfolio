@@ -316,10 +316,10 @@ nav ul {
   }
 }
 nav ul li {
+  position: relative;
   padding: 0.6rem 0;
   margin-left: 7rem;
   cursor: pointer;
-  position: relative;
 }
 @media (max-width: 1100px) {
   nav ul li {
@@ -341,8 +341,8 @@ nav ul li .hoverEffectSpan {
   height: 0.1rem;
   position: absolute;
   bottom: 0;
-  transition: all 0.4s;
   border: 0 solid #0128ab;
+  transition: all 0.4s;
 }
 nav ul li .hoverEffectSpan.changeColour {
   border: 0 solid white;
@@ -384,6 +384,7 @@ header {
   align-items: flex-end;
   background: black;
   margin-bottom: 10rem;
+  padding-bottom: 4vh;
 }
 header .headerVideo {
   height: 80%;
@@ -392,7 +393,6 @@ header h1 {
   position: absolute;
   font-size: 10rem;
   color: white;
-  margin-bottom: 8vh;
   text-align: center;
 }
 @media (max-width: 1100px) {
@@ -537,23 +537,32 @@ header h1 {
   .projectList .project .description {
     width: 45vmax;
     padding: 0;
-    order: 2;
+    text-align: right;
+    transform: translateX(-130%);
   }
 }
 @media (max-width: 768px) {
   .projectList .project .description {
     width: 58%;
+    transform: translateX(-120%);
   }
 }
 @media (max-width: 600px) {
   .projectList .project .description {
     order: 1;
     width: 90%;
+    text-align: left;
+    transform: translateX(-110%);
   }
 }
 @media (max-width: 430px) {
   .projectList .project .description {
     margin-bottom: 7.5rem;
+  }
+}
+@media (max-width: 375px) {
+  .projectList .project .description {
+    transform: translateX(-115%);
   }
 }
 .projectList .project .description h3 {
@@ -637,7 +646,6 @@ header h1 {
 }
 @media (max-width: 1100px) {
   .projectList .project .projectMobileImage {
-    order: 1;
     height: 35vmax;
     width: 22vmax;
     margin-bottom: 9rem;
@@ -807,6 +815,7 @@ header h1 {
   font-size: 8rem;
   color: white;
   width: calc(100% / 5);
+  position: relative;
 }
 @media (max-width: 1100px) {
   .skills .skillsContainer ul li {
@@ -829,29 +838,43 @@ header h1 {
   opacity: 1;
 }
 .skills .skillsContainer ul li span {
+  position: absolute;
+  bottom: 17%;
   opacity: 0;
-  margin-top: 1rem;
   font-size: 1.9rem;
   transition: opacity 0.5s;
 }
 @media (max-width: 1100px) {
   .skills .skillsContainer ul li span {
     font-size: 1.7rem;
+    bottom: 12%;
   }
 }
 @media (max-width: 600px) {
   .skills .skillsContainer ul li span {
     font-size: 1.55rem;
+    bottom: 7%;
   }
 }
 @media (max-width: 430px) {
   .skills .skillsContainer ul li span {
     font-size: 1.45rem;
+    bottom: 3%;
   }
 }
 
 #about {
   margin-bottom: 7rem;
+}
+@media (max-width: 768px) {
+  #about {
+    margin-bottom: 6rem;
+  }
+}
+@media (max-width: 768px) and (max-width: 768px) {
+  #about {
+    margin-bottom: 5rem;
+  }
 }
 
 .about {
@@ -859,9 +882,41 @@ header h1 {
   justify-content: space-between;
   margin-bottom: 18rem;
 }
+@media (max-width: 1100px) {
+  .about {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 .about .profileImage {
   width: 33%;
   position: relative;
+}
+@media (max-width: 1100px) {
+  .about .profileImage {
+    margin-bottom: 5rem;
+  }
+}
+@media (max-width: 768px) {
+  .about .profileImage {
+    width: 30rem;
+  }
+}
+@media (max-width: 600px) {
+  .about .profileImage {
+    width: 29rem;
+    margin-bottom: 4rem;
+  }
+}
+@media (max-width: 430px) {
+  .about .profileImage {
+    width: 70%;
+  }
+}
+@media (max-width: 375px) {
+  .about .profileImage {
+    width: 90%;
+  }
 }
 .about .profileImage .overlayImage {
   position: absolute;
@@ -890,6 +945,24 @@ header h1 {
 .about .aboutMeDescription {
   width: 60%;
 }
+@media (max-width: 1100px) {
+  .about .aboutMeDescription {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+  }
+}
+@media (max-width: 768px) {
+  .about .aboutMeDescription {
+    width: 85%;
+  }
+}
+@media (max-width: 430px) {
+  .about .aboutMeDescription {
+    width: 90%;
+  }
+}
 .about .aboutMeDescription p {
   font-size: 1.7rem;
   line-height: 2.7rem;
@@ -898,8 +971,19 @@ header h1 {
 .about .aboutMeDescription p span {
   color: #0128ab;
 }
+@media (max-width: 768px) {
+  .about .aboutMeDescription p {
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+  }
+}
 .about .aboutMeDescription p:nth-of-type(2) {
-  margin-top: 1.7rem;
+  margin-top: 1.6rem;
+}
+@media (max-width: 1100px) {
+  .about .aboutMeDescription p:nth-of-type(2) {
+    margin-bottom: 3rem;
+  }
 }
 .about .aboutMeDescription a {
   display: inline-block;
@@ -962,6 +1046,9 @@ header h1 {
   .contact .wrapper ul {
     font-size: 3.4rem;
   }
+}
+.contact .wrapper li {
+  cursor: pointer;
 }
 .contact .wrapper a {
   font-size: 3.5rem;

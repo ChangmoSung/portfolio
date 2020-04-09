@@ -42,6 +42,8 @@
                 color: white;
                 width: calc(100% / 5);
 
+                position: relative;
+
                 @include mq1100 {
                     width: calc(100% / 4);
                     font-size: 6.5rem;
@@ -60,23 +62,26 @@
                     opacity: 1;
                 }
 
-
                 span {
+                    position: absolute;
+                    bottom: 17%;
                     opacity: 0;
-                    margin-top: 1rem;
                     font-size: 1.9rem;
                     transition: opacity 0.5s;
 
                     @include mq1100 {
                         font-size: 1.7rem;
+                        bottom: 12%;
                     }
 
                     @include mq600 {
                         font-size: 1.55rem;
+                        bottom: 7%;
                     }
 
                     @include mq430 {
                         font-size: 1.45rem;
+                        bottom: 3%;
                     }
                 }
             }

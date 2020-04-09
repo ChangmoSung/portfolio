@@ -56,7 +56,6 @@
         flex-wrap: wrap;
         justify-content: space-between;
 
-
         @include mq1100 {
             justify-content: space-evenly;
         }
@@ -83,20 +82,28 @@
             @include mq1100 {
                 width: 45vmax;
                 padding: 0;
-                order: 2;
+                text-align: right;
+                transform: translateX(-130%);
             }
 
             @include mq768 {
-                width: 58%
+                width: 58%;
+                transform: translateX(-120%);
             }
 
             @include mq600 {
                 order: 1;
                 width: 90%;
+                text-align: left;
+                transform: translateX(-110%);
             }
 
             @include mq430 {
                 margin-bottom: 7.5rem;
+            }
+
+            @include mq375 {
+                transform: translateX(-115%);
             }
 
             h3 {
@@ -178,7 +185,6 @@
             }
 
             @include mq1100 {
-                order: 1;
                 height: 35vmax;
                 width: 22vmax;
                 margin-bottom: 9rem;

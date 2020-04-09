@@ -1,5 +1,13 @@
 #about {
     margin-bottom: 7rem;
+
+    @include mq768 {
+        margin-bottom: 6rem;
+
+        @include mq768 {
+            margin-bottom: 5rem;
+        }
+    }
 }
 
 .about {
@@ -7,37 +15,78 @@
     justify-content: space-between;
     margin-bottom: 18rem;
 
+    @include mq1100 {
+        flex-direction: column;
+        align-items: center;
+    }
+
     .profileImage {
         width: 33%;
         position: relative;
 
+        @include mq1100 {
+            margin-bottom: 5rem;
+        }
+
+        @include mq768 {
+            width: 30rem;
+        }
+
+        @include mq600 {
+            width: 29rem;
+            margin-bottom: 4rem;
+        }
+
+        @include mq430 {
+            width: 70%;
+        }
+
+        @include mq375 {
+            width: 90%;
+        }
+
         .overlayImage {
-                position: absolute;
-                width: 7rem;
-                height: 7rem;
-                top: -7rem;
-                left: 0rem;
-                
-                &.active {
-                    animation: spin 3s linear infinite;
-                }
-                
-                @include mq768 {
-                    width: 6rem;
-                    height: 6rem;
-                    top: -6rem;
-                }
-                
-                @include mq430 {
-                    width: 5rem;
-                    height: 5rem;
-                    top: -5rem;
-                }
+            position: absolute;
+            width: 7rem;
+            height: 7rem;
+            top: -7rem;
+            left: 0rem;
+            
+            &.active {
+                animation: spin 3s linear infinite;
             }
+            
+            @include mq768 {
+                width: 6rem;
+                height: 6rem;
+                top: -6rem;
+            }
+            
+            @include mq430 {
+                width: 5rem;
+                height: 5rem;
+                top: -5rem;
+            }
+        }
     }
 
     .aboutMeDescription {
         width: 60%;
+
+        @include mq1100 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 70%;
+        }
+
+        @include mq768 {
+            width: 85%;
+        }
+
+        @include mq430 {
+            width: 90%;
+        }
 
         p {
             font-size: 1.7rem;
@@ -47,10 +96,19 @@
             span {
                 color: rgb(1, 40, 171);
             }
+
+            @include mq768 {
+                font-size: 1.6rem;
+                line-height: 2.6rem;
+            }
         }
 
         p:nth-of-type(2) {
-            margin-top: 1.7rem;
+            margin-top: 1.6rem;
+
+            @include mq1100 {
+                margin-bottom: 3rem;
+            }
         }
 
         a {
