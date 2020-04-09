@@ -9,8 +9,8 @@
 .navTrigger {
     display: none;
     position: fixed;
-    top: 1rem;
-    right: 1rem;
+    top: 2rem;
+    right: 2rem;
     width: 7.5rem;
     height: 7.5rem;
     z-index: 999;
@@ -19,6 +19,11 @@
 
     @include mq768 {
         display: block;
+    }
+
+    @include mq430 {
+        width: 6.5rem;
+        height: 6.5rem;
     }
 }
 
@@ -37,9 +42,13 @@ nav {
 
    @include mq768 {
         width: 26rem;
-        top: 8.5rem;
+        top: 9.5rem;
         right: -26rem;
         background: white;
+   }
+
+   @include mq430 {
+       top: 8.5rem;
    }
     
     ul {
@@ -55,11 +64,14 @@ nav {
         }
         
         li {
-            padding: 1.2rem 0;
+            padding: 0.6rem 0;
             margin-left: 7rem;
             cursor: pointer;
 
+            position: relative;
+
             @include mq1100 {
+                padding: 0.5rem 0;
                 margin-left: 5.5rem;
             }
 
@@ -69,13 +81,31 @@ nav {
                 align-items: center;
                 height: 6rem;
                 margin: 0;
+            }
 
-                &:hover {
-                    background: rgba(0, 0, 0, 0.7);
+            .hoverEffectSpan {
+                width: 0;
+                height: 0.1rem;
+                position: absolute;
+                bottom: 0;
+                transition: all 0.4s;
+                border: 0 solid rgb(1, 40, 171);
+
+                &.changeColour {
+                        border: 0 solid white;
+                    }                
+
+                &.showHoverEffect {
+                    width: 100%;
+                    border: 0.18rem solid rgb(1, 40, 171);
+
+                    &.changeColour {
+                        border: 0.18rem solid white;
+                    }
                 }
 
-                &:hover a {
-                    color: white;
+                &.hideHoverEffect {
+                    width: 0;
                 }
             }
         }
@@ -83,7 +113,7 @@ nav {
         a {
             color: white;
             text-decoration: none;
-            font-size: 3rem;
+            font-size: 2.5rem;
             text-transform: uppercase;
 
             &.changeColour {
@@ -91,12 +121,11 @@ nav {
             }
 
             @include mq1100 {
-                font-size: 2.5rem;
+                font-size: 2.2rem;
             }
 
             @include mq768 {
-                color: black;
-                font-size: 2rem;
+                color: rgb(1, 40, 171);
             }
         }
     }

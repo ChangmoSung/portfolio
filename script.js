@@ -3,26 +3,34 @@ $(function() {
     const $projectDesktopImages = $('.projectDesktopImage').toArray();
     const $projectMobileImages = $('.projectMobileImage').toArray();
     const $nav = $('nav');
-    const $navLinks = $('nav a').toArray();
+    const $navLists = $('.navList');
+    const $navLinks = $('.navLink');
+    const $hoverEffectSpans = $('.hoverEffectSpan');
 
-    function slideProject() {
+    $navLists.on('mouseenter', function() {
+        $(this).children().last().toggleClass('showHoverEffect');
+    })
+
+    $navLists.on('mouseleave', function () {
+        $(this).children().last().toggleClass('showHoverEffect');
+    })
+
+    $(window).on('scroll', function() {
         const scrollTop = $(this).scrollTop();
-        if(scrollTop > window.innerHeight - 60) {
-            $nav.addClass('changeColour');
+        const screenHeight = $(this).innerHeight();
 
-            $navLinks.forEach(link => {
-                link.classList.add('changeColour');
-            })
+        if(scrollTop > screenHeight) {
+            $nav.addClass('changeColour');
+            $navLinks.addClass('changeColour');
+            $hoverEffectSpans.addClass('changeColour');
         } else {
             $nav.removeClass('changeColour');
-
-            $navLinks.forEach(link => {
-                link.classList.remove('changeColour');
-            })
+            $navLinks.removeClass('changeColour');
+            $hoverEffectSpans.removeClass('changeColour');
         }
 
         $projectDescriptions.forEach(description => {
-            const slideAt = (scrollTop + window.innerHeight) - description.offsetHeight / 2;
+            const slideAt = (scrollTop + screenHeight) - description.offsetHeight / 2;
             const elementBottom = description.offsetTop + description.offsetHeight;
             const halfShown = slideAt > description.offsetTop;
             const notScrolledPast = scrollTop < elementBottom;
@@ -34,6 +42,7 @@ $(function() {
             }
         })
 
+        // ----- to spin flowers at certain pixel point ----- //
         $projectDesktopImages.forEach(image => {
             spinFlower(image);
         })
@@ -43,7 +52,7 @@ $(function() {
         })
 
         function spinFlower(image) {
-            const slideAt = (scrollTop + window.innerHeight) - image.offsetHeight / 2;
+            const slideAt = (scrollTop + screenHeight) - image.offsetHeight / 2;
             const elementBottom = image.offsetTop + image.offsetHeight;
             const halfShown = slideAt > image.offsetTop;
             const notScrolledPast = scrollTop < elementBottom;
@@ -58,7 +67,5 @@ $(function() {
                 image.children[1].classList.remove('active');
             }
         }
-    }
-
-    $(window).on('scroll', slideProject);
+    });
 });

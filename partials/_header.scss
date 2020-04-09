@@ -12,30 +12,30 @@ header {
 
     h1 {
         position: absolute;
-        font-size: 12rem;
+        font-size: 10rem;
         color: white;
         margin-bottom: 8vh;
         text-align: center;
 
         @include mq1100 {
-            font-size: 9.5rem;
+            font-size: 9rem;
         }
 
         @include mq768 {
-            width: 75%;
+            width: 70%;
             text-align: left;
-            line-height: 8.5rem;
-            font-size: 8.5rem;
+            line-height: 8rem;
+            font-size: 8rem;
         }
 
         @include mq600 {
-            font-size: 7.5rem;
-            line-height: 7.5rem;
+            font-size: 7rem;
+            line-height: 7rem;
         }
 
         @include mq430 {
-            font-size: 6.5rem;
-            line-height: 6.5rem;
+            font-size: 6rem;
+            line-height: 6rem;
         }
 
         @include mq375 {

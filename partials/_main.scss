@@ -1,9 +1,11 @@
 #projects,
 #skillList,
+#about,
 #contact {
     font-size: 10rem;
     margin: 0;
     text-transform: uppercase;
+    color: rgb(1, 40, 171);
 
     @include mq1100 {
         font-size: 9.5rem;
@@ -41,10 +43,6 @@
     @include mq600 {
         margin-bottom: 5rem;
     }
-}
-
-#contact {
-    margin-top: 18rem;
 }
 
 .projectList {
@@ -116,6 +114,11 @@
                 border: 2px solid black;
                 padding: 0.7rem;
                 margin-right: 2rem;
+
+                &:hover {
+                    color: white;
+                    background: rgb(1, 40, 171);
+                }
 
                 @include mq768 {
                     font-size: 1.7rem;
