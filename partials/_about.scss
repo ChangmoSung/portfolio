@@ -43,6 +43,10 @@
             font-size: 1.7rem;
             line-height: 2.7rem;
             margin: 0;
+
+            span {
+                color: rgb(1, 40, 171);
+            }
         }
 
         p:nth-of-type(2) {
@@ -62,6 +66,7 @@
             &:hover {
                 color: white;
                 background: rgb(1, 40, 171);
+                box-shadow: 0 0 1rem 0.2rem rgb(1, 40, 171);
             }
         }
     }

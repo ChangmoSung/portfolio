@@ -73,7 +73,12 @@
         .description {
             margin-bottom: 8rem;
             padding-right: 40%;
-            transition: all 0.5s;
+            transform: translateX(-100%);
+            transition: transform 0.5s;
+
+            &.active {
+                transform: translateX(0);
+            }
 
             @include mq1100 {
                 width: 45vmax;
@@ -164,9 +169,13 @@
         .projectMobileImage {
             width: 30%;
             height: 45rem;
-            transition: all 0.5s;
             position: relative;
             box-shadow: 0 0 1rem 0.1rem black;
+            transition: all 0.4s;
+
+             &.active {
+                box-shadow: 0 0 1rem 0.7rem rgb(1, 40, 171);
+            }
 
             @include mq1100 {
                 order: 1;
@@ -223,11 +232,12 @@
         .projectDesktopImage {
             width: 65%;
             height: 45rem;
-            transition: all 0.5s;
             position: relative;
             box-shadow: 0 0 1rem 0.1rem black;
+            transition: all 0.4s;
 
             &.active {
+                box-shadow: 0 0 1rem 0.7rem rgb(1, 40, 171);
             }
 
             @include mq1100 {
