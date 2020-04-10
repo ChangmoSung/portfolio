@@ -2,45 +2,36 @@
 #skillList,
 #about,
 #contact {
-    font-size: 10rem;
+    font-size: 6.8rem;
     margin: 0;
     text-transform: uppercase;
-    color: rgb(1, 40, 171);
 
     @include mq1100 {
-        font-size: 9.5rem;
-    }
-
-    @include mq768 {
-        font-size: 9rem;
-    }
-
-    @include mq600 {
-        text-align: center;
-        font-size: 8rem;
-    }
-
-    @include mq430 {
         font-size: 6.5rem;
     }
 
-    @include mq375 {
+    @include mq768 {
+        text-align: center;
+        font-size: 6.2rem;
+    }
+
+    @include mq600 {
         font-size: 6rem;
+    }
+
+    @include mq430 {
+        font-size: 5.5rem;
+    }
+
+    @include mq375 {
+        font-size: 5rem;
     }
 }
 
 #projects {
-    margin-bottom: 5rem;
-
-    @include mq1100 {
-        margin-bottom: 12rem;
-    }
+    margin-bottom: 10rem;
 
     @include mq768 {
-        margin-bottom: 10rem;
-    }
-
-    @include mq600 {
         margin-bottom: 5rem;
     }
 }
@@ -50,240 +41,145 @@
     list-style: none;
 
     .project {
-        margin: 0 0 18rem;
+        margin: 0 0 27rem;
         transition: all 0.5s;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
 
-        @include mq1100 {
-            justify-content: space-evenly;
-        }
-
-        @include mq768 {
-            justify-content: space-between;
-        }
-
-        @include mq600 {
-            justify-content: center;
-            margin: 0 0 15rem;
-        }
-
         .description {
-            margin-bottom: 8rem;
-            padding-right: 40%;
-            transform: translateX(-100%);
+            width: 50%;
+            height: 100%;
             transition: transform 0.5s;
 
-            &.active {
-                transform: translateX(0);
-            }
-
-            @include mq1100 {
-                width: 45vmax;
-                padding: 0;
-                text-align: right;
-                transform: translateX(-130%);
-            }
-
             @include mq768 {
-                width: 58%;
-                transform: translateX(-120%);
-            }
-
-            @include mq600 {
-                order: 1;
                 width: 90%;
-                text-align: left;
-                transform: translateX(-110%);
-            }
-
-            @include mq430 {
-                margin-bottom: 7.5rem;
-            }
-
-            @include mq375 {
-                transform: translateX(-115%);
+                text-align: center;
+                margin: 0 auto 7rem;
             }
 
             h3 {
-                font-size: 4.5rem;
-                margin: 0 0 2rem; 
+                font-size: 4.2rem;
+                margin: 0 0 3rem; 
 
-                @include mq768 {
-                    font-size: 4rem;
+                @include mq1100 {
+                    font-size: 3.7rem;
+                    line-height: 4.7rem;
                 }
 
-                @include mq430 {
-                    font-size: 3.8rem;
+                @include mq600 {
+                    font-size: 3.5rem;
+                    line-height: 4.5rem;
+                }
+
+                @include mq375 {
+                    font-size: 3.2rem;
+                    line-height: 4.2rem;
                 }
             }
 
             a {
                 color: black;
                 text-decoration: none;
-                font-size: 1.8rem;
+                font-size: 2rem;
                 border: 2px solid black;
                 padding: 0.7rem;
                 margin-right: 2rem;
 
                 &:hover {
                     color: white;
-                    background: rgb(1, 40, 171);
+                    background: black;
+                }
+
+                @include mq1100 {
+                    font-size: 1.85rem;
                 }
 
                 @include mq768 {
-                    font-size: 1.7rem;
-                    padding: 0.6rem;
+                    margin: 0 1rem;
+                    padding: 1rem 2rem;
                 }
 
-                @include mq430 {
+                @include mq600 {
+                    font-size: 1.7rem;
+                }
+
+                @include mq375 {
                     font-size: 1.6rem;
-                    padding: 0.5rem;
                 }
             }
 
             h4 {
-                font-size: 1.8rem;
+                font-size: 2rem;
                 margin: 2rem 0 0;
 
-                @include mq768 {
-                    font-size: 1.7rem;
+                @include mq1100 {
+                    font-size: 1.9rem;
                 }
 
-                @include mq430 {
-                    font-size: 1.6rem;
+                @include mq600 {
+                    font-size: 1.75rem;
+                }
+
+                @include mq375 {
+                    font-size: 1.65rem;
                 }
             }
 
             p {
-                font-size: 1.7rem;
-                line-height: 2.7rem;
-                margin: 1rem 0 0;
+                font-size: 1.8rem;
+                line-height: 2.8rem;
+                margin: 1.5rem 0 0;
 
-                @include mq768 {
-                    font-size: 1.6rem;
-                    line-height: 2.6rem;
+                @include mq1100 {
+                    font-size: 1.7rem;
+                    line-height: 2.7rem;
                 }
 
-                @include mq430 {
-                    font-size: 1.5rem;
-                    line-height: 2.4rem;
+                @include mq600 {
+                    font-size: 1.65rem;
+                    line-height: 2.65rem;
+                }
+
+                @include mq375 {
+                    font-size: 1.55rem;
+                    line-height: 2.55rem;
                 }
             }
         }
 
-        .projectMobileImage {
-            width: 30%;
-            height: 45rem;
+        .projectDesktopImage {
+            width: 45%;
+            height: 100%;
             position: relative;
-            box-shadow: 0 0 1rem 0.1rem black;
-            transition: all 0.4s;
 
-             &.active {
-                box-shadow: 0 0 1rem 0.7rem rgb(1, 40, 171);
-            }
+            &.active {
 
-            @include mq1100 {
-                height: 35vmax;
-                width: 22vmax;
-                margin-bottom: 9rem;
             }
 
             @include mq768 {
-                margin-bottom: 8rem;
-            }
-
-            @include mq600 {
-                order: 2;
-                width: 19rem;
-                height: 30rem;
-            }
-
-            @include mq430 {
-                width: 17rem;
-                height: 26rem;
-                margin-bottom: 7.5rem;
-            }
-
-            .overlayImage {
-                position: absolute;
-                width: 7rem;
-                height: 7rem;
-                top: -7rem;
-                right: 0rem;
-                
-                &.active {
-                    animation: spin 3s linear infinite;
-                }
-
-                @include mq768 {
-                    width: 6rem;
-                    height: 6rem;
-                    top: -6rem;
-                }
-
-                @include mq430 {
-                    width: 5rem;
-                    height: 5rem;
-                    top: -5rem;
-                }
-            }
-
-            .overlayImage:nth-child(1) {
-                left: 0;
-            }
-        }
-        
-        .projectDesktopImage {
-            width: 65%;
-            height: 45rem;
-            position: relative;
-            box-shadow: 0 0 1rem 0.1rem black;
-            transition: all 0.4s;
-
-            &.active {
-                box-shadow: 0 0 1rem 0.7rem rgb(1, 40, 171);
-            }
-
-            @include mq1100 {
-                width: 57vmax;
-                height: 38vmax;
+                width: 75%;
                 margin: 0 auto;
-                order: 3;
             }
 
             @include mq600 {
-                order: 2;
-                width: 38rem;
-                height: 25rem;
+                width: 80%;
             }
 
             @include mq430 {
-                width: 30rem;
-                height: 20rem;
-            }
-
-            @include mq375 {
-                width: 28rem;
-                height: 18.5rem;
+                width: 100%;
             }
 
             .overlayImage {
                 position: absolute;
-                width: 7rem;
-                height: 7rem;
-                top: -7rem;
-                right: 0rem;
-                
-                &.active {
-                    animation: spin 3s linear infinite;
-                }
-                
+                width: 6rem;
+                height: 6rem;
+                top: -6rem;
+
                 @include mq768 {
-                    width: 6rem;
-                    height: 6rem;
-                    top: -6rem;
+                    width: 5.5rem;
+                    height: 5.5rem;
+                    top: -5.5rem;
                 }
                 
                 @include mq430 {
@@ -297,15 +193,5 @@
                 left: 0;
             }
         }
-    }
-}
-
-@keyframes spin {
-    0% {
-        transform: rotate(0);
-    }
-
-    100% {
-        transform: rotate(360deg);
     }
 }

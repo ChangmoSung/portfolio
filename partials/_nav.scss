@@ -85,20 +85,22 @@ nav {
                 width: 0;
                 height: 0.1rem;
                 position: absolute;
+                left: 50%;
                 bottom: 0;
-                border: 0 solid rgb(1, 40, 171);
-                transition: all 0.4s;
+                border: 0 solid rgb(216, 137, 173);
+                transition: all 0.3s;
 
                 &.changeColour {
-                        border: 0 solid white;
-                    }                
+                    border: 0 solid white;
+                }                
 
                 &.showHoverEffect {
                     width: 100%;
-                    border: 0.18rem solid rgb(1, 40, 171);
+                    border: 0.15rem solid rgb(216, 137, 173);
+                    left: 0;
 
                     &.changeColour {
-                        border: 0.18rem solid white;
+                        border: 0.15rem solid white;
                     }
                 }
 
@@ -123,7 +125,7 @@ nav {
             }
 
             @include mq768 {
-                color: rgb(1, 40, 171);
+                color: rgb(216, 137, 173);
             }
         }
     }

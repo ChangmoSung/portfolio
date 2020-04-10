@@ -1,9 +1,9 @@
 .contact {
     background: black;
-    padding: 7rem 0;
+    padding: 6rem 0;
 
     @include mq600 {
-        padding: 6rem 0;
+        padding: 5rem 0;
     }
 
     .wrapper {
@@ -11,7 +11,7 @@
         flex-direction: column;
         align-items: center;
     
-        ul {
+        .contactLists {
             display: flex;
             justify-content: space-between;
             width: 70%;
@@ -20,7 +20,7 @@
             margin: 0;
             padding: 0;
             color: white;
-            margin-bottom: 7rem;
+            margin-bottom: 6rem;
 
             @include mq768 {
                 font-size: 4.5rem;
@@ -28,7 +28,7 @@
 
             @include mq600 {
                 font-size: 4rem;
-                margin-bottom: 6rem;
+                margin-bottom: 5rem;
             }
 
             @include mq430 {
@@ -37,6 +37,26 @@
 
             @include mq375 {
                 font-size: 3.4rem;
+            }
+
+            a {
+                font-size: 4.8rem;
+
+                @include mq768 {
+                    font-size: 4.5rem;
+                }
+
+                @include mq600 {
+                    font-size: 4.15rem;
+                }
+
+                @include mq430 {
+                    font-size: 3.9rem;
+                }
+
+                @include mq375 {
+                    font-size: 3.6rem;
+                }
             }
         }
 
@@ -67,30 +87,37 @@
         }
 
         a:nth-of-type(1) {
-            margin-bottom: 7rem;
+            margin-bottom: 6rem;
 
             @include mq600 {
-                margin-bottom: 6rem;
+                margin-bottom: 5rem;
             }
         }
 
         a:nth-of-type(2) {
-            font-size: 2.75rem;
+            font-size: 2.2rem;
+            border: 2px solid white;
+            padding: 1.3rem 1.8rem;
+
+            &:hover {
+                background: white;
+                color: black;
+            }
 
             @include mq768 {
-                font-size: 2.35rem;
+                font-size: 2rem;
             }
 
             @include mq600 {
-                font-size: 2.2rem;
+                font-size: 1.9rem;
             }
 
             @include mq430 {
-                font-size: 2.05rem;
+                font-size: 1.8rem;
             }
 
             @include mq375 {
-                font-size: 2rem;
+                font-size: 1.6rem;
             }
         }
     }

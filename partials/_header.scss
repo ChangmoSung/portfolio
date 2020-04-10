@@ -5,7 +5,10 @@ header {
     align-items: flex-end;
     background: black;
     margin-bottom: 10rem;
-    padding-bottom: 4vh;
+
+    @include mq768 {
+        padding-bottom: 6rem;
+    }
 
     .headerVideo {
         height: 80%;
@@ -13,34 +16,33 @@ header {
 
     h1 {
         position: absolute;
-        font-size: 10rem;
+        font-size: 9rem;
         color: white;
         text-align: center;
+        text-transform: uppercase;
 
         @include mq1100 {
-            font-size: 9rem;
-        }
-
-        @include mq768 {
-            width: 70%;
-            text-align: left;
-            line-height: 8rem;
             font-size: 8rem;
         }
 
-        @include mq600 {
+        @include mq768 {
+            width: 85%;
             font-size: 7rem;
-            line-height: 7rem;
+        }
+
+        @include mq600 {
+            font-size: 6.5rem;
+            line-height: 6.5rem;
         }
 
         @include mq430 {
-            font-size: 6rem;
-            line-height: 6rem;
+            font-size: 5.5rem;
+            line-height: 5.5rem;
         }
 
         @include mq375 {
-            font-size: 5.5rem;
-            line-height: 6rem;
+            font-size: 5rem;
+            line-height: 5rem;
         }
     }
 }

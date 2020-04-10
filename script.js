@@ -1,7 +1,6 @@
 $(function() {
     const $projectDescriptions = $('.description').toArray();
     const $projectDesktopImages = $('.projectDesktopImage').toArray();
-    const $projectMobileImages = $('.projectMobileImage').toArray();
     const $nav = $('nav');
     const $navLists = $('.navList');
     const $navLinks = $('.navLink');
@@ -42,10 +41,6 @@ $(function() {
             scrollEvent(image);
         })
 
-        $projectMobileImages.forEach(image => {
-            scrollEvent(image);
-        })
-
         function scrollEvent(item) {
             const slideAt = (scrollTop + screenHeight) - item.offsetHeight / 2;
             const elementBottom = item.offsetTop + item.offsetHeight;
@@ -55,11 +50,9 @@ $(function() {
             if (halfShown && notScrolledPast) {
                 item.classList.add('active');
                 item.children[0].classList.add('active');
-                item.children[1].classList.add('active');
             } else {
                 item.classList.remove('active');
                 item.children[0].classList.remove('active');
-                item.children[1].classList.remove('active');
             }
         }
     });
