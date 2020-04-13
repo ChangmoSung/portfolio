@@ -6,12 +6,23 @@ header {
     background: black;
     margin-bottom: 10rem;
 
-    @include mq768 {
+    &.showHeaderImage {
+        background-image: url(../assets/headerImage.jpeg);
+        background-size: 100% 55%;
+        background-repeat: no-repeat;
+        background-position: 0 50%;
+    }
+
+    @include mq600 {
         padding-bottom: 6rem;
     }
 
     .headerVideo {
         height: 80%;
+
+        &.hideVideo {
+            display: none;
+        }
     }
 
     h1 {
@@ -27,22 +38,23 @@ header {
 
         @include mq768 {
             width: 85%;
-            font-size: 7rem;
+            font-size: 7.3rem;
+            line-height: 7.3rem;
         }
 
         @include mq600 {
-            font-size: 6.5rem;
-            line-height: 6.5rem;
+            font-size: 6.8rem;
+            line-height: 6.8rem;
         }
 
         @include mq430 {
-            font-size: 5.5rem;
-            line-height: 5.5rem;
+            font-size: 6.3rem;
+            line-height: 6.3rem;
         }
 
         @include mq375 {
-            font-size: 5rem;
-            line-height: 5rem;
+            font-size: 6rem;
+            line-height: 6rem;
         }
     }
 }

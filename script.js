@@ -1,11 +1,12 @@
 $(function() {
-    const $projectDescriptions = $('.description').toArray();
+    const $header = $('header');
     const $projectDesktopImages = $('.projectDesktopImage').toArray();
     const $nav = $('nav');
     const $navLists = $('.navList');
     const $navLinks = $('.navLink');
     const $hoverEffectSpans = $('.hoverEffectSpan');
     const $videos = $('video').toArray();
+    const $profileImage = $('.profileImage').toArray();
 
     $navLists.on('mouseenter', function() {
         $(this).children().last().toggleClass('showHoverEffect');
@@ -16,7 +17,11 @@ $(function() {
     })
 
     if(window.innerWidth <= 430) {
-        $videos.forEach(video => video.pause());
+        $videos.forEach(video => {
+            video.pause();
+            video.classList.add('hideVideo');
+            $header.addClass('showHeaderImage');
+        });
     }
 
     $(window).on('scroll', function() {
@@ -33,26 +38,20 @@ $(function() {
             $hoverEffectSpans.removeClass('changeColour');
         }
 
-        $projectDescriptions.forEach(description => {
-            scrollEvent(description)
-        })
+        $profileImage.forEach(image => showImage(image))
 
-        $projectDesktopImages.forEach(image => {
-            scrollEvent(image);
-        })
+        $projectDesktopImages.forEach(image => showImage(image))
 
-        function scrollEvent(item) {
-            const slideAt = (scrollTop + screenHeight) - item.offsetHeight / 2;
-            const elementBottom = item.offsetTop + item.offsetHeight;
-            const halfShown = slideAt > item.offsetTop;
+        function showImage(image) {
+            const slideAt = (scrollTop + screenHeight) - image.offsetHeight / 2;
+            const elementBottom = image.offsetTop + image.offsetHeight;
+            const halfShown = slideAt > image.offsetTop;
             const notScrolledPast = scrollTop < elementBottom;
 
             if (halfShown && notScrolledPast) {
-                item.classList.add('active');
-                item.children[0].classList.add('active');
+                image.children[0].classList.add('active');
             } else {
-                item.classList.remove('active');
-                item.children[0].classList.remove('active');
+                image.children[0].classList.remove('active');
             }
         }
     });

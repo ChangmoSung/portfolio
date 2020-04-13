@@ -7,6 +7,10 @@
         video {
             min-height: 55.5rem;
             object-fit: cover;
+
+            @include mq430 {
+                min-height: 65rem;
+            }
         }
 
         ul {
@@ -30,7 +34,7 @@
             }
 
             @include mq430 {
-                padding: 4% 10%;
+                padding: 10% 10%;
             }
 
             li {
@@ -41,7 +45,6 @@
                 font-size: 8rem;
                 color: white;
                 width: calc(100% / 5);
-
                 position: relative;
 
                 @include mq1100 {
@@ -54,7 +57,7 @@
                 }
 
                 @include mq430 {
-                    font-size: 5.5rem;
+                    font-size: 6.2rem;
                     width: 50%;
                 }
 
@@ -75,7 +78,7 @@
 
                     @include mq600 {
                         font-size: 1.55rem;
-                        bottom: 7%;
+                        bottom: 6%;
                     }
 
                     @include mq430 {

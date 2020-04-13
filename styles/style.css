@@ -262,19 +262,26 @@ video {
   right: 2rem;
   width: 7.5rem;
   height: 7.5rem;
+  padding: 0.1rem;
   z-index: 999;
   color: white;
   cursor: pointer;
+  box-shadow: 5px 5px 0.3rem 0 #d889ad;
 }
-@media (max-width: 768px) {
+.navTrigger:hover {
+  top: 2.25rem;
+  right: 1.85rem;
+  box-shadow: 2.5px 2.5px 0.2rem 0 #d889ad;
+}
+@media (max-width: 1100px) {
   .navTrigger {
     display: block;
   }
 }
 @media (max-width: 430px) {
   .navTrigger {
-    width: 6.5rem;
-    height: 6.5rem;
+    width: 6rem;
+    height: 6rem;
   }
 }
 
@@ -289,7 +296,7 @@ nav {
 nav.changeColour {
   background: black;
 }
-@media (max-width: 768px) {
+@media (max-width: 1100px) {
   nav {
     width: 26rem;
     top: 9.5rem;
@@ -308,7 +315,7 @@ nav ul {
   list-style: none;
   margin-right: 10%;
 }
-@media (max-width: 768px) {
+@media (max-width: 1100px) {
   nav ul {
     flex-direction: column;
     margin: 0;
@@ -322,12 +329,6 @@ nav ul li {
   cursor: pointer;
 }
 @media (max-width: 1100px) {
-  nav ul li {
-    padding: 0.5rem 0;
-    margin-left: 5.5rem;
-  }
-}
-@media (max-width: 768px) {
   nav ul li {
     display: flex;
     justify-content: center;
@@ -371,10 +372,6 @@ nav ul a.changeColour {
 @media (max-width: 1100px) {
   nav ul a {
     font-size: 2.2rem;
-  }
-}
-@media (max-width: 768px) {
-  nav ul a {
     color: #d889ad;
   }
 }
@@ -387,13 +384,22 @@ header {
   background: black;
   margin-bottom: 10rem;
 }
-@media (max-width: 768px) {
+header.showHeaderImage {
+  background-image: url(../assets/headerImage.jpeg);
+  background-size: 100% 55%;
+  background-repeat: no-repeat;
+  background-position: 0 50%;
+}
+@media (max-width: 600px) {
   header {
     padding-bottom: 6rem;
   }
 }
 header .headerVideo {
   height: 80%;
+}
+header .headerVideo.hideVideo {
+  display: none;
 }
 header h1 {
   position: absolute;
@@ -410,25 +416,26 @@ header h1 {
 @media (max-width: 768px) {
   header h1 {
     width: 85%;
-    font-size: 7rem;
+    font-size: 7.3rem;
+    line-height: 7.3rem;
   }
 }
 @media (max-width: 600px) {
   header h1 {
-    font-size: 6.5rem;
-    line-height: 6.5rem;
+    font-size: 6.8rem;
+    line-height: 6.8rem;
   }
 }
 @media (max-width: 430px) {
   header h1 {
-    font-size: 5.5rem;
-    line-height: 5.5rem;
+    font-size: 6.3rem;
+    line-height: 6.3rem;
   }
 }
 @media (max-width: 375px) {
   header h1 {
-    font-size: 5rem;
-    line-height: 5rem;
+    font-size: 6rem;
+    line-height: 6rem;
   }
 }
 
@@ -454,15 +461,7 @@ header h1 {
 #about,
 #contact {
     text-align: center;
-    font-size: 6.2rem;
-  }
-}
-@media (max-width: 600px) {
-  #projects,
-#skillList,
-#about,
-#contact {
-    font-size: 6rem;
+    font-size: 5.7rem;
   }
 }
 @media (max-width: 430px) {
@@ -470,15 +469,7 @@ header h1 {
 #skillList,
 #about,
 #contact {
-    font-size: 5.5rem;
-  }
-}
-@media (max-width: 375px) {
-  #projects,
-#skillList,
-#about,
-#contact {
-    font-size: 5rem;
+    font-size: 5.1rem;
   }
 }
 
@@ -496,11 +487,26 @@ header h1 {
   list-style: none;
 }
 .projectList .project {
-  margin: 0 0 27rem;
+  margin: 0 0 25rem;
   transition: all 0.5s;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+}
+@media (max-width: 1100px) {
+  .projectList .project {
+    margin: 0 0 23rem;
+  }
+}
+@media (max-width: 768px) {
+  .projectList .project {
+    margin: 0 0 17rem;
+  }
+}
+@media (max-width: 430px) {
+  .projectList .project {
+    margin: 0 0 14rem;
+  }
 }
 .projectList .project .description {
   width: 50%;
@@ -511,7 +517,12 @@ header h1 {
   .projectList .project .description {
     width: 90%;
     text-align: center;
-    margin: 0 auto 7rem;
+    margin: 0 auto 6rem;
+  }
+}
+@media (max-width: 430px) {
+  .projectList .project .description {
+    margin: 0 auto 5.5rem;
   }
 }
 .projectList .project .description h3 {
@@ -520,20 +531,19 @@ header h1 {
 }
 @media (max-width: 1100px) {
   .projectList .project .description h3 {
-    font-size: 3.7rem;
-    line-height: 4.7rem;
+    font-size: 4rem;
+    line-height: 4.8rem;
   }
 }
 @media (max-width: 600px) {
   .projectList .project .description h3 {
-    font-size: 3.5rem;
-    line-height: 4.5rem;
+    margin: 0 0 2rem;
   }
 }
-@media (max-width: 375px) {
+@media (max-width: 430px) {
   .projectList .project .description h3 {
-    font-size: 3.2rem;
-    line-height: 4.2rem;
+    font-size: 3.8rem;
+    line-height: 4.6rem;
   }
 }
 .projectList .project .description a {
@@ -541,8 +551,8 @@ header h1 {
   text-decoration: none;
   font-size: 2rem;
   border: 2px solid black;
-  padding: 0.7rem;
-  margin-right: 2rem;
+  padding: 0.8rem 1.6rem;
+  margin-right: 1rem;
 }
 .projectList .project .description a:hover {
   color: white;
@@ -555,18 +565,18 @@ header h1 {
 }
 @media (max-width: 768px) {
   .projectList .project .description a {
-    margin: 0 1rem;
-    padding: 1rem 2rem;
+    margin: 0 0.5rem;
   }
 }
 @media (max-width: 600px) {
   .projectList .project .description a {
-    font-size: 1.7rem;
+    font-size: 1.65rem;
   }
 }
-@media (max-width: 375px) {
+@media (max-width: 430px) {
   .projectList .project .description a {
     font-size: 1.6rem;
+    padding: 0.6rem 1.2rem;
   }
 }
 .projectList .project .description h4 {
@@ -583,7 +593,7 @@ header h1 {
     font-size: 1.75rem;
   }
 }
-@media (max-width: 375px) {
+@media (max-width: 430px) {
   .projectList .project .description h4 {
     font-size: 1.65rem;
   }
@@ -601,11 +611,11 @@ header h1 {
 }
 @media (max-width: 600px) {
   .projectList .project .description p {
-    font-size: 1.65rem;
-    line-height: 2.65rem;
+    font-size: 1.6rem;
+    line-height: 2.6rem;
   }
 }
-@media (max-width: 375px) {
+@media (max-width: 430px) {
   .projectList .project .description p {
     font-size: 1.55rem;
     line-height: 2.55rem;
@@ -637,6 +647,11 @@ header h1 {
   width: 6rem;
   height: 6rem;
   top: -6rem;
+  opacity: 0;
+  transition: opacity 0.7s;
+}
+.projectList .project .projectDesktopImage .overlayImage.active {
+  opacity: 1;
 }
 @media (max-width: 768px) {
   .projectList .project .projectDesktopImage .overlayImage {
@@ -666,6 +681,11 @@ header h1 {
   min-height: 55.5rem;
   object-fit: cover;
 }
+@media (max-width: 430px) {
+  .skills .skillsContainer video {
+    min-height: 65rem;
+  }
+}
 .skills .skillsContainer ul {
   position: absolute;
   top: 0;
@@ -690,7 +710,7 @@ header h1 {
 }
 @media (max-width: 430px) {
   .skills .skillsContainer ul {
-    padding: 4% 10%;
+    padding: 10% 10%;
   }
 }
 .skills .skillsContainer ul li {
@@ -716,7 +736,7 @@ header h1 {
 }
 @media (max-width: 430px) {
   .skills .skillsContainer ul li {
-    font-size: 5.5rem;
+    font-size: 6.2rem;
     width: 50%;
   }
 }
@@ -738,7 +758,7 @@ header h1 {
 @media (max-width: 600px) {
   .skills .skillsContainer ul li span {
     font-size: 1.55rem;
-    bottom: 7%;
+    bottom: 6%;
   }
 }
 @media (max-width: 430px) {
@@ -749,11 +769,11 @@ header h1 {
 }
 
 #about {
-  margin-bottom: 7rem;
+  margin-bottom: 6rem;
 }
 @media (max-width: 768px) {
   #about {
-    margin-bottom: 6rem;
+    margin-bottom: 5.5rem;
   }
 }
 @media (max-width: 768px) and (max-width: 768px) {
@@ -779,13 +799,12 @@ header h1 {
 }
 @media (max-width: 1100px) {
   .about .profileImage {
-    margin-bottom: 5rem;
+    margin-bottom: 4rem;
   }
 }
 @media (max-width: 768px) {
   .about .profileImage {
     width: 50%;
-    margin-bottom: 4rem;
   }
 }
 @media (max-width: 600px) {
@@ -800,19 +819,21 @@ header h1 {
 }
 .about .profileImage .overlayImage {
   position: absolute;
-  width: 7rem;
-  height: 7rem;
-  top: -7rem;
+  width: 6rem;
+  height: 6rem;
+  top: -6rem;
   left: 0rem;
+  opacity: 0;
+  transition: opacity 0.7s;
 }
 .about .profileImage .overlayImage.active {
-  animation: spin 3s linear infinite;
+  opacity: 1;
 }
 @media (max-width: 768px) {
   .about .profileImage .overlayImage {
-    width: 6rem;
-    height: 6rem;
-    top: -6rem;
+    width: 5.5rem;
+    height: 5.5rem;
+    top: -5.5rem;
   }
 }
 @media (max-width: 430px) {
@@ -831,6 +852,7 @@ header h1 {
     flex-direction: column;
     align-items: center;
     width: 80%;
+    text-align: center;
   }
 }
 @media (max-width: 768px) {
@@ -849,7 +871,7 @@ header h1 {
   margin: 0;
 }
 .about .aboutMeDescription p span {
-  color: #0128ab;
+  color: #d889ad;
 }
 @media (max-width: 1100px) {
   .about .aboutMeDescription p {
@@ -880,7 +902,7 @@ header h1 {
 .about .aboutMeDescription a {
   display: inline-block;
   font-size: 2rem;
-  margin-top: 4rem;
+  margin-top: 3rem;
   padding: 1.4rem 2.3rem;
   text-transform: uppercase;
   border: 2px solid black;
