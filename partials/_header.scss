@@ -5,16 +5,13 @@ header {
     align-items: flex-end;
     background: black;
     margin-bottom: 10rem;
+    position: relative;
 
     &.showHeaderImage {
         background-image: url(../assets/headerImage.jpeg);
-        background-size: 100% 55%;
+        background-size: contain;
         background-repeat: no-repeat;
-        background-position: 0 50%;
-    }
-
-    @include mq600 {
-        padding-bottom: 6rem;
+        background-position: 0 70%;
     }
 
     .headerVideo {
@@ -27,6 +24,7 @@ header {
 
     h1 {
         position: absolute;
+        bottom: 0;
         font-size: 9rem;
         color: white;
         text-align: center;

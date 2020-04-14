@@ -258,8 +258,8 @@ video {
 .navTrigger {
   display: none;
   position: fixed;
-  top: 2rem;
-  right: 2rem;
+  top: 3rem;
+  right: 3rem;
   width: 7.5rem;
   height: 7.5rem;
   padding: 0.1rem;
@@ -269,8 +269,8 @@ video {
   box-shadow: 5px 5px 0.3rem 0 #d889ad;
 }
 .navTrigger:hover {
-  top: 2.25rem;
-  right: 1.85rem;
+  top: 3.25rem;
+  right: 2.85rem;
   box-shadow: 2.5px 2.5px 0.2rem 0 #d889ad;
 }
 @media (max-width: 1100px) {
@@ -299,14 +299,14 @@ nav.changeColour {
 @media (max-width: 1100px) {
   nav {
     width: 26rem;
-    top: 9.5rem;
+    top: 11rem;
     right: -26rem;
     background: white;
   }
 }
 @media (max-width: 430px) {
   nav {
-    top: 8.5rem;
+    top: 9.5rem;
   }
 }
 nav ul {
@@ -383,17 +383,13 @@ header {
   align-items: flex-end;
   background: black;
   margin-bottom: 10rem;
+  position: relative;
 }
 header.showHeaderImage {
   background-image: url(../assets/headerImage.jpeg);
-  background-size: 100% 55%;
+  background-size: contain;
   background-repeat: no-repeat;
-  background-position: 0 50%;
-}
-@media (max-width: 600px) {
-  header {
-    padding-bottom: 6rem;
-  }
+  background-position: 0 70%;
 }
 header .headerVideo {
   height: 80%;
@@ -403,6 +399,7 @@ header .headerVideo.hideVideo {
 }
 header h1 {
   position: absolute;
+  bottom: 0;
   font-size: 9rem;
   color: white;
   text-align: center;

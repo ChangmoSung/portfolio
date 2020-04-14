@@ -9,8 +9,8 @@
 .navTrigger {
     display: none;
     position: fixed;
-    top: 2rem;
-    right: 2rem;
+    top: 3rem;
+    right: 3rem;
     width: 7.5rem;
     height: 7.5rem;
     padding: 0.1rem;
@@ -20,8 +20,8 @@
     box-shadow: 5px 5px 0.3rem 0 rgb(216, 137, 173);
 
     &:hover {
-        top: 2.25rem;
-        right: 1.85rem;
+        top: 3.25rem;
+        right: 2.85rem;
         box-shadow: 2.5px 2.5px 0.2rem 0 rgb(216, 137, 173);
     }
 
@@ -49,13 +49,13 @@ nav {
 
    @include mq1100 {
         width: 26rem;
-        top: 9.5rem;
+        top: 11rem;
         right: -26rem;
         background: white;
    }
 
    @include mq430 {
-       top: 8.5rem;
+       top: 9.5rem;
    }
     
     ul {
